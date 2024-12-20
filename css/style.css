@@ -1,0 +1,403 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+  font-family: "Roboto Condensed", "Noto Sans JP", serif;
+}
+
+h2 {
+  font-size: 56px;
+  font-family: "Roboto Condensed", "Noto Sans JP", serif;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: "Roboto Condensed", "Noto Sans JP", serif;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: "Roboto Condensed", "Noto Sans JP", serif;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Roboto Condensed", "Noto Sans JP", serif;
+}
+
+li {
+  font-size: none;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.contents-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 120px;
+  padding: 0 40px;
+}
+.header__logo {
+  width: 75px;
+}
+.header .nav {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  color: #FFFFFF;
+}
+
+.section-head {
+  margin-bottom: 104px;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 32px;
+  background-color: #F2F2F2;
+}
+.footer .nav-menu {
+  margin-bottom: 24px;
+  color: #333333;
+}
+.footer .privacy-link {
+  display: block;
+  margin-bottom: 80px;
+}
+.footer__copyright {
+  color: #333333;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  width: 212px;
+  height: 48px;
+  border-radius: 4px;
+  font-family: "Noto Sans JP";
+}
+.btn .fa-envelope {
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+.btn--fill {
+  background-color: #FC9F06;
+  color: #FFFFFF;
+}
+.btn--stroke {
+  border: 1px solid #FC9F06;
+  background-color: #FFFFFF;
+  color: #FC9F06;
+}
+
+.hero {
+  width: 100%;
+  height: 100dvh;
+  z-index: -2;
+  background: url("../img/photo1.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex; /* フレックスボックスを有効化 */
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.hero .hero_text {
+  font-family: "Noto Sans JP";
+  color: #FFFFFF;
+  padding-left: 120px;
+  padding-top: 200px;
+}
+
+.concept {
+  background-color: #FFFFFF;
+}
+.concept .section-head {
+  margin-bottom: 104px;
+}
+.concept-first {
+  display: flex;
+  align-items: stretch; /* 子要素の高さを揃える */
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.concept-first .column-left {
+  width: 60%;
+}
+.concept-first .column-left .concept-content__head1 {
+  margin-bottom: 56px;
+}
+.concept-first .column-left .concept-content__head2 {
+  margin-bottom: 80px;
+}
+.concept-first .column-left .concept-content__text {
+  margin-bottom: 120px;
+  line-height: 1.75;
+}
+.concept-first .column-right {
+  position: relative;
+  width: 40%;
+}
+.concept-first .column-right__photo {
+  width: 100%;
+  aspect-ratio: 3/4; /* 縦横比を指定 */
+  -o-object-fit: cover;
+     object-fit: cover; /* 写真をトリミングして全体を表示 */
+  display: block; /* インラインスペースの影響を防ぐ */
+}
+
+.service {
+  background-color: #F2F2F2;
+}
+.service .service-content__head {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.service .service-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service .service-content .problems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 72px;
+       column-gap: 72px;
+}
+.service .service-content .problems-article {
+  width: 336px;
+  font-family: "Noto Sans JP";
+  font-weight: 600;
+  text-align: center; /* テキストを中央揃え */
+}
+.service .service-content .problem-title {
+  margin-bottom: 24px;
+}
+.service .service-content .problems-article ul li {
+  margin-bottom: 8px; /* 各リストアイテムの下に16pxの間隔 */
+}
+.service .service-content .text-box {
+  border: 2px solid black; /* 枠線のスタイル */
+  padding: 16px; /* 内側の余白 */
+  border-radius: 8px; /* 角を丸くする */
+  background-color: #fbfcfc; /* 背景色 */
+}
+.service .service-content .below {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.assistant {
+  background-color: #FFFFFF;
+}
+.assistant .section-head {
+  margin-bottom: 104px;
+}
+.assistant-first {
+  display: flex;
+  align-items: stretch; /* 子要素の高さを揃える */
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.assistant-first .column-left {
+  width: 60%;
+}
+.assistant-first .column-left .assistant__head {
+  margin-bottom: 144px;
+}
+.assistant-first .column-left .assistant__text {
+  margin-bottom: 160px;
+  line-height: 1.75;
+}
+.assistant-first .column-left .assistant__foot {
+  margin-bottom: 120px;
+}
+.assistant-first .column-right {
+  position: relative;
+  width: 40%;
+}
+.assistant-first .column-right__photo {
+  width: 100%;
+  aspect-ratio: 3/4; /* 縦横比を指定 */
+  -o-object-fit: cover;
+     object-fit: cover; /* 写真をトリミングして全体を表示 */
+  display: block; /* インラインスペースの影響を防ぐ */
+}
+.assistant-second {
+  display: flex;
+}
+.assistant-second .task-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 72px;
+       column-gap: 72px;
+}
+.assistant-second .task-article {
+  width: 336px;
+  font-family: "Noto Sans JP";
+  text-align: center; /* テキストを中央揃え */
+}
+.assistant-second .task-article__title {
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.assistant-second .task-article ul li {
+  margin-bottom: 8px; /* 各リストアイテムの下に16pxの間隔 */
+}
+.assistant-second .text-box {
+  border: 2px solid black; /* 枠線のスタイル */
+  padding: 16px; /* 内側の余白 */
+  border-radius: 8px; /* 角を丸くする */
+  background-color: #f9f9f9; /* 背景色 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* シャドウ効果 (任意) */
+}
+
+.web {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  padding: 120px 0;
+  background: url("../img/photo4.jpg") center center no-repeat;
+  background-size: cover;
+}
+.web:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.web .message {
+  margin-bottom: 144px;
+}
+.web .web-text {
+  line-height: 1.75;
+}
+
+.works {
+  background-color: #F2F2F2;
+}
+.works-items {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin-bottom: 96px;
+}
+.works-article {
+  width: 33.3333333333%;
+  font-family: "Noto Sans JP";
+}
+.works-article .picture-frame {
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.works-article__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s linear;
+}
+.works-article__img:hover {
+  transform: scale(1.1);
+}
+.works .title {
+  margin-bottom: 120px;
+  text-align: center;
+}
+.works .works-article__title {
+  text-align: center;
+}
+.works .btn {
+  margin: 0 auto;
+}
+
+.profile {
+  background-color: #FFFFFF;
+}
+.profile .profile-text {
+  line-height: 1.75;
+}
+.profile .picture-frame {
+  width: 30%;
+  aspect-ratio: 4/3;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.profile__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s linear;
+}
+
+.contact {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  padding: 120px 0;
+  background: url("../img/photo9.jpg") center center no-repeat;
+  background-size: cover;
+}
+.contact:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.contact__message {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.contact .btn {
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,405 @@
+// コンパイルに必要なパーシャルファイルを読み込み
+@use 'variables' as *;
+@use 'common' as *;
+@use 'header' as *;
+@use 'modules' as *;
+@use 'header' as*;
+@use 'footer' ;
+@use 'mixin' as *;
+
+
+
+// ボタン
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    width: 212px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: $sans;
+
+    .fa-envelope{
+        margin-bottom: 3px;
+        font-size: 16px;
+    }
+
+    &--fill{
+        background-color: $accentColor;
+        color: $textColor2;
+    }
+
+    &--stroke{
+        border: 1px solid $accentColor;
+        background-color: $baseColor1;
+        color: $accentColor;
+    }
+}
+    
+// ヒーローエリア
+.hero{
+    width: 100%;
+    height: 100dvh;
+    z-index: -2;
+    background: url("../img/photo1.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;              /* フレックスボックスを有効化 */
+    // justify-content: center;    /* 水平方向の中央揃え */
+    // align-items: center;        /* 垂直方向の中央揃え */
+
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $overlay2;
+    }
+
+    .hero_text{
+        font-family: $sans;
+        color: $textColor2;
+        padding-left: 120px;
+        padding-top: 200px;
+    }
+
+// .hero .hero_text{
+    // font-family: $sans;
+    // color: $textColor2;
+    // text-align: center; 
+}
+
+// CONCEPT
+.concept{
+    background-color: $baseColor1;
+
+    .section-head{
+        margin-bottom: 104px;
+    }
+
+    &-first{
+        display: flex;
+        align-items: stretch; /* 子要素の高さを揃える */
+        // align-items: center;
+        column-gap: 16px;
+        // margin-bottom: 104px;
+
+        .column-left{
+            width: 60%;
+
+            .concept-content__head1{
+                margin-bottom: 56px;
+            }
+
+            .concept-content__head2{
+                margin-bottom: 80px;
+            }
+
+            .concept-content__text{
+                margin-bottom: 120px;
+                line-height: 1.75;
+            }
+        }
+
+        .column-right{
+            position: relative;
+            width: 40%; 
+            // height: 570px;
+            
+            &__photo{
+                width: 100%;
+                aspect-ratio: 3 / 4; /* 縦横比を指定 */
+                object-fit: cover;  /* 写真をトリミングして全体を表示 */
+                display: block;     /* インラインスペースの影響を防ぐ */
+                
+                // position: absolute;
+                // top: 0;
+                // right: 0;
+                // width: 584px;
+                // aspect-ratio: 1/2;
+                // object-fit: cover;
+            }
+        }
+    }
+}
+
+// SERVICE
+.service{
+    background-color: $baseColor2;
+    
+
+    .service-content__head{
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    .service-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // min-height: 400px;
+    
+
+    .problems{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 72px;
+        
+    }
+    
+        .problems-article {
+            width: 336px;
+            font-family: $sans;
+            font-weight: 600;
+            text-align: center;      /* テキストを中央揃え */    
+        }
+
+        .problem-title{
+            margin-bottom: 24px;
+        }
+
+        .problems-article ul li {
+            margin-bottom: 8px; /* 各リストアイテムの下に16pxの間隔 */
+        }
+
+        .text-box {
+            border: 2px solid black;    /* 枠線のスタイル */
+            padding: 16px;             /* 内側の余白 */
+            border-radius: 8px;        /* 角を丸くする */
+            background-color: #fbfcfc; /* 背景色 */
+        }
+
+        .below{
+            font-weight: 600;
+            text-align: center;
+            margin-top: 24px;
+        }
+    } 
+    
+}
+
+// ONLINE ASSISTANT
+.assistant{
+    background-color: $baseColor1;
+
+    .section-head{
+        margin-bottom: 104px;
+    }
+
+    &-first{
+        display: flex;
+        align-items: stretch; /* 子要素の高さを揃える */
+        // align-items: center;
+        column-gap: 16px;
+        // margin-bottom: 104px;
+
+        .column-left{
+            width: 60%;
+
+            .assistant__head{
+                margin-bottom: 144px;
+            }
+
+            .assistant__text{
+                margin-bottom: 160px;
+                line-height: 1.75;
+            }
+
+            .assistant__foot{
+                margin-bottom: 120px;
+            }
+        }
+
+        .column-right{
+            position: relative;
+            width: 40%; 
+            // height: 570px;
+            
+            &__photo{
+                width: 100%;
+                aspect-ratio: 3 / 4; /* 縦横比を指定 */
+                object-fit: cover;  /* 写真をトリミングして全体を表示 */
+                display: block;     /* インラインスペースの影響を防ぐ */
+                
+                // position: absolute;
+                // top: 0;
+                // right: 0;
+                // width: 584px;
+                // aspect-ratio: 1/2;
+                // object-fit: cover;
+            }
+        }
+    }
+    &-second{
+        display: flex;
+
+        .task-items{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            column-gap: 72px;
+            // margin-bottom: 96px;
+        }
+
+        .task-article{
+            width: 336px;
+            font-family: $sans;
+            text-align: center;      /* テキストを中央揃え */    
+        }
+
+        .task-article__title{
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .task-article ul li {
+            margin-bottom: 8px; /* 各リストアイテムの下に16pxの間隔 */
+        }
+
+        .text-box {
+            border: 2px solid black;    /* 枠線のスタイル */
+            padding: 16px;             /* 内側の余白 */
+            border-radius: 8px;        /* 角を丸くする */
+            background-color: #f9f9f9; /* 背景色 */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* シャドウ効果 (任意) */
+        }
+        
+    }
+}
+
+// WEB WORKS
+.web{
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    padding: 120px 0;
+    background: url("../img/photo4.jpg") center center no-repeat;
+    background-size: cover;
+
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $overlay2;
+    }
+
+    .message{
+        margin-bottom: 144px;
+    }
+
+    .web-text{
+        line-height: 1.75;
+    }
+    
+}
+
+
+.works{
+    background-color: $baseColor2;
+    &-items{
+        display: flex;
+        column-gap: 16px;
+        margin-bottom: 96px;
+    }
+    
+
+    &-article{
+        width: calc(100% / 3);
+        font-family: $sans;
+        
+
+        .picture-frame{
+            width: 100%;
+            aspect-ratio: 4/3;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        &__img{
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            transition: transform .5s linear;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .title{
+        margin-bottom: 120px;
+        text-align: center;
+    }
+
+    .works-article__title{
+        text-align: center;
+    }
+
+    .btn{
+        margin: 0 auto;
+    }
+}
+
+// profile
+.profile{
+    background-color: $baseColor1;
+    .profile-text{
+        line-height: 1.75;
+    }
+
+    .picture-frame{
+        width: 30%;
+        aspect-ratio: 4/3;
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+
+    &__img{
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        transition: transform .5s linear;
+    }
+}
+
+
+//  CONTACT
+.contact{
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    padding: 120px 0;
+    background: url("../img/photo9.jpg") center center no-repeat;
+    background-size: cover;
+    
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $overlay2;
+    }
+
+    &__message{
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .btn{
+        margin: 0 auto;
+    }
+
+}

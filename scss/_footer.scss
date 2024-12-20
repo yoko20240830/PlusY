@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+.footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 32px;
+    background-color: $baseColor2;
+
+    .nav{
+        &-menu{
+        margin-bottom: 24px;
+        color: $textColor1;
+        }
+    }
+
+    .privacy-link{
+        display: block;
+        margin-bottom: 80px;
+    }
+
+    &__copyright{
+        color: $textColor1;
+    }
+}

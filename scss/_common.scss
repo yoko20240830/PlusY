@@ -1,0 +1,45 @@
+// variables.scssを読み込み
+@use 'variables' as *;
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color:$textColor1;
+    font-family: $Robot, $sans, serif;
+}
+
+h2{
+    font-size:  56px;
+    font-family: $Robot, $sans, serif;
+}
+
+h3{
+    font-size:  32px;
+    font-family: $Robot, $sans, serif;
+}
+
+h4{
+    font-size: 24px;
+    font-family: $Robot, $sans, serif;
+}
+
+p{
+    font-size:  16px;
+    font-family: $Robot, $sans, serif;
+}
+
+li{
+    font-size: none;
+}
+
+.section{
+    padding: 120px 0;
+}
+
+.contents-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
